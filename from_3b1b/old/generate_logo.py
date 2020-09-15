@@ -1,4 +1,4 @@
-from manimlib.imports import *
+from manim2.imports import *
 
 ## Warning, much of what is in this class
 ## likely not supported anymore.

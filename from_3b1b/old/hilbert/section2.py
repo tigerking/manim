@@ -1,4 +1,4 @@
-from manimlib.imports import *
+from manim2.imports import *
 import displayer as disp
 from hilbert.curves import \
     TransformOverIncreasingOrders, FlowSnake, HilbertCurve, \

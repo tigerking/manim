@@ -1,5 +1,5 @@
  # -*- coding: utf-8 -*-
-from manimlib.imports import *
+from manim2.imports import *
 
 
 def apply_function_to_center(point_func, mobject):

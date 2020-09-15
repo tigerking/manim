@@ -1,5 +1,5 @@
 
-from manimlib.imports import *
+from manim2.imports import *
 
 
 # Quick note to anyone coming to this file with the

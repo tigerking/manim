@@ -1,26 +1,26 @@
 import itertools as it
 import random
 
-from manimlib.animation.transform import ReplacementTransform
-from manimlib.animation.transform import Transform
-from manimlib.animation.transform import ApplyMethod
-from manimlib.animation.composition import LaggedStart
-from manimlib.constants import *
-from manimlib.for_3b1b_videos.pi_creature import Mortimer
-from manimlib.for_3b1b_videos.pi_creature import PiCreature
-from manimlib.for_3b1b_videos.pi_creature import Randolph
-from manimlib.for_3b1b_videos.pi_creature_animations import Blink
-from manimlib.for_3b1b_videos.pi_creature_animations import PiCreatureBubbleIntroduction
-from manimlib.for_3b1b_videos.pi_creature_animations import RemovePiCreatureBubble
-from manimlib.mobject.mobject import Group
-from manimlib.mobject.frame import ScreenRectangle
-from manimlib.mobject.svg.drawings import SpeechBubble
-from manimlib.mobject.svg.drawings import ThoughtBubble
-from manimlib.mobject.types.vectorized_mobject import VGroup
-from manimlib.scene.scene import Scene
-from manimlib.utils.rate_functions import squish_rate_func
-from manimlib.utils.rate_functions import there_and_back
-from manimlib.utils.space_ops import get_norm
+from manim2.animation.transform import ReplacementTransform
+from manim2.animation.transform import Transform
+from manim2.animation.transform import ApplyMethod
+from manim2.animation.composition import LaggedStart
+from manim2.constants import *
+from manim2.for_3b1b_videos.pi_creature import Mortimer
+from manim2.for_3b1b_videos.pi_creature import PiCreature
+from manim2.for_3b1b_videos.pi_creature import Randolph
+from manim2.for_3b1b_videos.pi_creature_animations import Blink
+from manim2.for_3b1b_videos.pi_creature_animations import PiCreatureBubbleIntroduction
+from manim2.for_3b1b_videos.pi_creature_animations import RemovePiCreatureBubble
+from manim2.mobject.mobject import Group
+from manim2.mobject.frame import ScreenRectangle
+from manim2.mobject.svg.drawings import SpeechBubble
+from manim2.mobject.svg.drawings import ThoughtBubble
+from manim2.mobject.types.vectorized_mobject import VGroup
+from manim2.scene.scene import Scene
+from manim2.utils.rate_functions import squish_rate_func
+from manim2.utils.rate_functions import there_and_back
+from manim2.utils.space_ops import get_norm
 
 
 class PiCreatureScene(Scene):

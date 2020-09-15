@@ -5,15 +5,15 @@ import warnings
 
 from xml.dom import minidom
 
-from manimlib.constants import *
-from manimlib.mobject.geometry import Circle
-from manimlib.mobject.geometry import Rectangle
-from manimlib.mobject.geometry import RoundedRectangle
-from manimlib.mobject.types.vectorized_mobject import VGroup
-from manimlib.mobject.types.vectorized_mobject import VMobject
-from manimlib.utils.color import *
-from manimlib.utils.config_ops import digest_config
-from manimlib.utils.config_ops import digest_locals
+from manim2.constants import *
+from manim2.mobject.geometry import Circle
+from manim2.mobject.geometry import Rectangle
+from manim2.mobject.geometry import RoundedRectangle
+from manim2.mobject.types.vectorized_mobject import VGroup
+from manim2.mobject.types.vectorized_mobject import VMobject
+from manim2.utils.color import *
+from manim2.utils.config_ops import digest_config
+from manim2.utils.config_ops import digest_locals
 
 
 def string_to_numbers(num_string):

@@ -1,4 +1,4 @@
-from manimlib.imports import *
+from manim2.imports import *
 
 RANDY_SCALE_FACTOR = 0.3
 

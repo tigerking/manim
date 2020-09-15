@@ -1,6 +1,6 @@
-from manimlib.camera.moving_camera import MovingCamera
-from manimlib.scene.scene import Scene
-from manimlib.utils.iterables import list_update
+from manim2.camera.moving_camera import MovingCamera
+from manim2.scene.scene import Scene
+from manim2.utils.iterables import list_update
 
 
 class MovingCameraScene(Scene):

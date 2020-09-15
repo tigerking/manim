@@ -1,4 +1,4 @@
-from manimlib.imports import *
+from manim2.imports import *
 from active_projects.diffyq.part2.heat_equation import *
 
 

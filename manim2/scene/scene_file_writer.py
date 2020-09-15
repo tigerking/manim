@@ -8,15 +8,15 @@ from time import sleep
 import datetime
 
 import manimlib.constants as consts
-from manimlib.constants import FFMPEG_BIN
-from manimlib.constants import STREAMING_IP
-from manimlib.constants import STREAMING_PORT
-from manimlib.constants import STREAMING_PROTOCOL
-from manimlib.utils.config_ops import digest_config
-from manimlib.utils.file_ops import guarantee_existence
-from manimlib.utils.file_ops import add_extension_if_not_present
-from manimlib.utils.file_ops import get_sorted_integer_files
-from manimlib.utils.sounds import get_full_sound_file_path
+from manim2.constants import FFMPEG_BIN
+from manim2.constants import STREAMING_IP
+from manim2.constants import STREAMING_PORT
+from manim2.constants import STREAMING_PROTOCOL
+from manim2.utils.config_ops import digest_config
+from manim2.utils.file_ops import guarantee_existence
+from manim2.utils.file_ops import add_extension_if_not_present
+from manim2.utils.file_ops import get_sorted_integer_files
+from manim2.utils.sounds import get_full_sound_file_path
 
 
 class SceneFileWriter(object):

@@ -1,4 +1,4 @@
-from manimlib.imports import *
+from manim2.imports import *
 
 TIME_COLOR = YELLOW
 X_COLOR = GREEN

@@ -1,5 +1,5 @@
 
-from manimlib.imports import *
+from manim2.imports import *
 from active_projects.eop.reusable_imports import *
 from active_projects.eop.chapter1.brick_row_scene import BrickRowScene
 

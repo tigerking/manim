@@ -1,24 +1,24 @@
 import numpy as np
 
-from manimlib.constants import *
-from manimlib.animation.animation import Animation
-from manimlib.animation.movement import Homotopy
-from manimlib.animation.composition import AnimationGroup
-from manimlib.animation.composition import Succession
-from manimlib.animation.creation import ShowCreation
-from manimlib.animation.creation import ShowPartial
-from manimlib.animation.fading import FadeOut
-from manimlib.animation.transform import Transform
-from manimlib.mobject.types.vectorized_mobject import VMobject
-from manimlib.mobject.geometry import Circle
-from manimlib.mobject.geometry import Dot
-from manimlib.mobject.shape_matchers import SurroundingRectangle
-from manimlib.mobject.types.vectorized_mobject import VGroup
-from manimlib.mobject.geometry import Line
-from manimlib.utils.bezier import interpolate
-from manimlib.utils.config_ops import digest_config
-from manimlib.utils.rate_functions import there_and_back
-from manimlib.utils.rate_functions import wiggle
+from manim2.constants import *
+from manim2.animation.animation import Animation
+from manim2.animation.movement import Homotopy
+from manim2.animation.composition import AnimationGroup
+from manim2.animation.composition import Succession
+from manim2.animation.creation import ShowCreation
+from manim2.animation.creation import ShowPartial
+from manim2.animation.fading import FadeOut
+from manim2.animation.transform import Transform
+from manim2.mobject.types.vectorized_mobject import VMobject
+from manim2.mobject.geometry import Circle
+from manim2.mobject.geometry import Dot
+from manim2.mobject.shape_matchers import SurroundingRectangle
+from manim2.mobject.types.vectorized_mobject import VGroup
+from manim2.mobject.geometry import Line
+from manim2.utils.bezier import interpolate
+from manim2.utils.config_ops import digest_config
+from manim2.utils.rate_functions import there_and_back
+from manim2.utils.rate_functions import wiggle
 
 
 class FocusOn(Transform):

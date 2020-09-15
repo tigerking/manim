@@ -1,6 +1,6 @@
-from manimlib.constants import BLACK
-from manimlib.mobject.numbers import Integer
-from manimlib.mobject.types.vectorized_mobject import VGroup
+from manim2.constants import BLACK
+from manim2.mobject.numbers import Integer
+from manim2.mobject.types.vectorized_mobject import VGroup
 
 
 def print_family(mobject, n_tabs=0):

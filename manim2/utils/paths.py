@@ -1,9 +1,9 @@
 import numpy as np
 
-from manimlib.constants import OUT
-from manimlib.utils.bezier import interpolate
-from manimlib.utils.space_ops import get_norm
-from manimlib.utils.space_ops import rotation_matrix
+from manim2.constants import OUT
+from manim2.utils.bezier import interpolate
+from manim2.utils.space_ops import get_norm
+from manim2.utils.space_ops import rotation_matrix
 
 STRAIGHT_PATH_THRESHOLD = 0.01
 

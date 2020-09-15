@@ -1,10 +1,10 @@
-from manimlib.animation.transform import ApplyMethod
-from manimlib.camera.moving_camera import MovingCamera
-from manimlib.camera.multi_camera import MultiCamera
-from manimlib.constants import *
-from manimlib.mobject.types.image_mobject import ImageMobjectFromCamera
-from manimlib.scene.moving_camera_scene import MovingCameraScene
-from manimlib.utils.simple_functions import fdiv
+from manim2.animation.transform import ApplyMethod
+from manim2.camera.moving_camera import MovingCamera
+from manim2.camera.multi_camera import MultiCamera
+from manim2.constants import *
+from manim2.mobject.types.image_mobject import ImageMobjectFromCamera
+from manim2.scene.moving_camera_scene import MovingCameraScene
+from manim2.utils.simple_functions import fdiv
 
 # Note, any scenes from old videos using ZoomedScene will almost certainly
 # break, as it was restructured.

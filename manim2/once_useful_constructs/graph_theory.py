@@ -4,10 +4,10 @@ import operator as op
 
 import numpy as np
 
-from manimlib.constants import *
-from manimlib.scene.scene import Scene
-from manimlib.utils.rate_functions import there_and_back
-from manimlib.utils.space_ops import center_of_mass
+from manim2.constants import *
+from manim2.scene.scene import Scene
+from manim2.utils.rate_functions import there_and_back
+from manim2.utils.space_ops import center_of_mass
 
 
 class Graph():

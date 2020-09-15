@@ -1,4 +1,4 @@
-from manimlib.imports import *
+from manim2.imports import *
 from from_3b1b.active.bayes.part1 import BayesDiagram
 from from_3b1b.active.bayes.part1 import LibrarianIcon
 from from_3b1b.active.bayes.part1 import Person

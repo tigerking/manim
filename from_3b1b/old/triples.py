@@ -1,5 +1,5 @@
 import fractions
-from manimlib.imports import *
+from manim2.imports import *
 
 A_COLOR = BLUE
 B_COLOR = GREEN

@@ -1,15 +1,15 @@
 from functools import reduce
 import operator as op
 
-from manimlib.constants import *
-from manimlib.mobject.geometry import Line
-from manimlib.mobject.svg.svg_mobject import SVGMobject
-from manimlib.mobject.svg.svg_mobject import VMobjectFromSVGPathstring
-from manimlib.mobject.types.vectorized_mobject import VGroup
-from manimlib.mobject.types.vectorized_mobject import VectorizedPoint
-from manimlib.utils.config_ops import digest_config
-from manimlib.utils.strings import split_string_list_to_isolate_substrings
-from manimlib.utils.tex_file_writing import tex_to_svg_file
+from manim2.constants import *
+from manim2.mobject.geometry import Line
+from manim2.mobject.svg.svg_mobject import SVGMobject
+from manim2.mobject.svg.svg_mobject import VMobjectFromSVGPathstring
+from manim2.mobject.types.vectorized_mobject import VGroup
+from manim2.mobject.types.vectorized_mobject import VectorizedPoint
+from manim2.utils.config_ops import digest_config
+from manim2.utils.strings import split_string_list_to_isolate_substrings
+from manim2.utils.tex_file_writing import tex_to_svg_file
 
 
 TEX_MOB_SCALE_FACTOR = 0.05

@@ -1,17 +1,17 @@
 import numpy as np
 import numbers
 
-from manimlib.constants import *
-from manimlib.mobject.functions import ParametricFunction
-from manimlib.mobject.geometry import Arrow
-from manimlib.mobject.geometry import Line
-from manimlib.mobject.number_line import NumberLine
-from manimlib.mobject.svg.tex_mobject import TexMobject
-from manimlib.mobject.types.vectorized_mobject import VGroup
-from manimlib.utils.config_ops import digest_config
-from manimlib.utils.config_ops import merge_dicts_recursively
-from manimlib.utils.simple_functions import binary_search
-from manimlib.utils.space_ops import angle_of_vector
+from manim2.constants import *
+from manim2.mobject.functions import ParametricFunction
+from manim2.mobject.geometry import Arrow
+from manim2.mobject.geometry import Line
+from manim2.mobject.number_line import NumberLine
+from manim2.mobject.svg.tex_mobject import TexMobject
+from manim2.mobject.types.vectorized_mobject import VGroup
+from manim2.utils.config_ops import digest_config
+from manim2.utils.config_ops import merge_dicts_recursively
+from manim2.utils.simple_functions import binary_search
+from manim2.utils.space_ops import angle_of_vector
 
 # TODO: There should be much more code reuse between Axes, NumberPlane and GraphScene
 

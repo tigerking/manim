@@ -1,4 +1,4 @@
-from manimlib.imports import *
+from manim2.imports import *
 from from_3b1b.old.eola.chapter5 import get_det_text, RightHandRule
 
 

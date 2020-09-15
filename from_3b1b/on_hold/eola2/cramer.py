@@ -1,4 +1,4 @@
-from manimlib.imports import *
+from manim2.imports import *
 
 X_COLOR = GREEN
 Y_COLOR = RED

@@ -1,4 +1,4 @@
-from manimlib.imports import *
+from manim2.imports import *
 
 T_COLOR = LIGHT_GREY
 VELOCITY_COLOR = GREEN

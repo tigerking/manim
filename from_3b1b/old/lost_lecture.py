@@ -1,5 +1,5 @@
 
-from manimlib.imports import *
+from manim2.imports import *
 
 from from_3b1b.old.div_curl import VectorField
 from from_3b1b.old.div_curl import get_force_field_func

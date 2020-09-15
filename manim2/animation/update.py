@@ -1,6 +1,6 @@
 import operator as op
 
-from manimlib.animation.animation import Animation
+from manim2.animation.animation import Animation
 
 
 class UpdateFromFunc(Animation):

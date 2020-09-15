@@ -1,30 +1,30 @@
 import itertools as it
 import string
 
-from manimlib.animation.animation import Animation
-from manimlib.animation.rotation import Rotating
-from manimlib.constants import *
-from manimlib.mobject.geometry import AnnularSector
-from manimlib.mobject.geometry import Arc
-from manimlib.mobject.geometry import Circle
-from manimlib.mobject.geometry import Line
-from manimlib.mobject.geometry import Polygon
-from manimlib.mobject.geometry import Rectangle
-from manimlib.mobject.geometry import Square
-from manimlib.mobject.mobject import Mobject
-from manimlib.mobject.svg.svg_mobject import SVGMobject
-from manimlib.mobject.svg.tex_mobject import TexMobject
-from manimlib.mobject.svg.tex_mobject import TextMobject
-from manimlib.mobject.three_dimensions import Cube
-from manimlib.mobject.types.vectorized_mobject import VGroup
-from manimlib.mobject.types.vectorized_mobject import VMobject
-from manimlib.mobject.types.vectorized_mobject import VectorizedPoint
-from manimlib.utils.bezier import interpolate
-from manimlib.utils.config_ops import digest_config
-from manimlib.utils.rate_functions import linear
-from manimlib.utils.space_ops import angle_of_vector
-from manimlib.utils.space_ops import complex_to_R3
-from manimlib.utils.space_ops import rotate_vector
+from manim2.animation.animation import Animation
+from manim2.animation.rotation import Rotating
+from manim2.constants import *
+from manim2.mobject.geometry import AnnularSector
+from manim2.mobject.geometry import Arc
+from manim2.mobject.geometry import Circle
+from manim2.mobject.geometry import Line
+from manim2.mobject.geometry import Polygon
+from manim2.mobject.geometry import Rectangle
+from manim2.mobject.geometry import Square
+from manim2.mobject.mobject import Mobject
+from manim2.mobject.svg.svg_mobject import SVGMobject
+from manim2.mobject.svg.tex_mobject import TexMobject
+from manim2.mobject.svg.tex_mobject import TextMobject
+from manim2.mobject.three_dimensions import Cube
+from manim2.mobject.types.vectorized_mobject import VGroup
+from manim2.mobject.types.vectorized_mobject import VMobject
+from manim2.mobject.types.vectorized_mobject import VectorizedPoint
+from manim2.utils.bezier import interpolate
+from manim2.utils.config_ops import digest_config
+from manim2.utils.rate_functions import linear
+from manim2.utils.space_ops import angle_of_vector
+from manim2.utils.space_ops import complex_to_R3
+from manim2.utils.space_ops import rotate_vector
 
 
 class Lightbulb(SVGMobject):
@@ -560,7 +560,7 @@ class Car(SVGMobject):
         self.set_stroke(color=WHITE, width=0)
         self.set_fill(self.color, opacity=1)
 
-        from manimlib.for_3b1b_videos.pi_creature import Randolph
+        from manim2.for_3b1b_videos.pi_creature import Randolph
         randy = Randolph(mode="happy")
         randy.set_height(0.6 * self.get_height())
         randy.stretch(0.8, 0)

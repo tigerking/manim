@@ -1,6 +1,6 @@
 from fractions import Fraction
 
-from manimlib.imports import *
+from manim2.imports import *
 from functools import reduce
 
 

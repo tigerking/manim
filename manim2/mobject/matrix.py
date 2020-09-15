@@ -1,13 +1,13 @@
 import numpy as np
 
-from manimlib.constants import *
-from manimlib.mobject.numbers import DecimalNumber
-from manimlib.mobject.numbers import Integer
-from manimlib.mobject.shape_matchers import BackgroundRectangle
-from manimlib.mobject.svg.tex_mobject import TexMobject
-from manimlib.mobject.svg.tex_mobject import TextMobject
-from manimlib.mobject.types.vectorized_mobject import VGroup
-from manimlib.mobject.types.vectorized_mobject import VMobject
+from manim2.constants import *
+from manim2.mobject.numbers import DecimalNumber
+from manim2.mobject.numbers import Integer
+from manim2.mobject.shape_matchers import BackgroundRectangle
+from manim2.mobject.svg.tex_mobject import TexMobject
+from manim2.mobject.svg.tex_mobject import TextMobject
+from manim2.mobject.types.vectorized_mobject import VGroup
+from manim2.mobject.types.vectorized_mobject import VMobject
 
 VECTOR_LABEL_SCALE_FACTOR = 0.8
 

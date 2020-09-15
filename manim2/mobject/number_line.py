@@ -1,14 +1,14 @@
 import operator as op
 
-from manimlib.constants import *
-from manimlib.mobject.geometry import Line
-from manimlib.mobject.numbers import DecimalNumber
-from manimlib.mobject.types.vectorized_mobject import VGroup
-from manimlib.utils.bezier import interpolate
-from manimlib.utils.config_ops import digest_config
-from manimlib.utils.config_ops import merge_dicts_recursively
-from manimlib.utils.simple_functions import fdiv
-from manimlib.utils.space_ops import normalize
+from manim2.constants import *
+from manim2.mobject.geometry import Line
+from manim2.mobject.numbers import DecimalNumber
+from manim2.mobject.types.vectorized_mobject import VGroup
+from manim2.utils.bezier import interpolate
+from manim2.utils.config_ops import digest_config
+from manim2.utils.config_ops import merge_dicts_recursively
+from manim2.utils.simple_functions import fdiv
+from manim2.utils.space_ops import normalize
 
 
 class NumberLine(Line):

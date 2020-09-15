@@ -1,29 +1,29 @@
 import random
 
-from manimlib.animation.composition import LaggedStartMap
-from manimlib.animation.creation import DrawBorderThenFill
-from manimlib.animation.creation import Write
-from manimlib.animation.fading import FadeIn
-from manimlib.animation.fading import FadeOut
-from manimlib.constants import *
-from manimlib.for_3b1b_videos.pi_creature import Mortimer
-from manimlib.for_3b1b_videos.pi_creature import Randolph
-from manimlib.for_3b1b_videos.pi_creature_animations import Blink
-from manimlib.for_3b1b_videos.pi_creature_scene import PiCreatureScene
-from manimlib.mobject.geometry import DashedLine
-from manimlib.mobject.geometry import Line
-from manimlib.mobject.geometry import Rectangle
-from manimlib.mobject.geometry import Square
-from manimlib.mobject.svg.drawings import Logo
-from manimlib.mobject.svg.drawings import PatreonLogo
-from manimlib.mobject.svg.tex_mobject import TextMobject
-from manimlib.mobject.types.vectorized_mobject import VGroup
-from manimlib.mobject.mobject_update_utils import always_shift
-from manimlib.scene.moving_camera_scene import MovingCameraScene
-from manimlib.scene.scene import Scene
-from manimlib.utils.rate_functions import linear
-from manimlib.utils.space_ops import get_norm
-from manimlib.utils.space_ops import normalize
+from manim2.animation.composition import LaggedStartMap
+from manim2.animation.creation import DrawBorderThenFill
+from manim2.animation.creation import Write
+from manim2.animation.fading import FadeIn
+from manim2.animation.fading import FadeOut
+from manim2.constants import *
+from manim2.for_3b1b_videos.pi_creature import Mortimer
+from manim2.for_3b1b_videos.pi_creature import Randolph
+from manim2.for_3b1b_videos.pi_creature_animations import Blink
+from manim2.for_3b1b_videos.pi_creature_scene import PiCreatureScene
+from manim2.mobject.geometry import DashedLine
+from manim2.mobject.geometry import Line
+from manim2.mobject.geometry import Rectangle
+from manim2.mobject.geometry import Square
+from manim2.mobject.svg.drawings import Logo
+from manim2.mobject.svg.drawings import PatreonLogo
+from manim2.mobject.svg.tex_mobject import TextMobject
+from manim2.mobject.types.vectorized_mobject import VGroup
+from manim2.mobject.mobject_update_utils import always_shift
+from manim2.scene.moving_camera_scene import MovingCameraScene
+from manim2.scene.scene import Scene
+from manim2.utils.rate_functions import linear
+from manim2.utils.space_ops import get_norm
+from manim2.utils.space_ops import normalize
 
 
 class OpeningQuote(Scene):

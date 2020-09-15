@@ -9,20 +9,20 @@ from scipy.spatial.distance import pdist
 import cairo
 import numpy as np
 
-from manimlib.constants import *
-from manimlib.mobject.types.image_mobject import AbstractImageMobject
-from manimlib.mobject.mobject import Mobject
-from manimlib.mobject.types.point_cloud_mobject import PMobject
-from manimlib.mobject.types.vectorized_mobject import VMobject
-from manimlib.utils.color import color_to_int_rgba
-from manimlib.utils.config_ops import digest_config
-from manimlib.utils.images import get_full_raster_image_path
-from manimlib.utils.iterables import batch_by_property
-from manimlib.utils.iterables import list_difference_update
-from manimlib.utils.iterables import remove_list_redundancies
-from manimlib.utils.simple_functions import fdiv
-from manimlib.utils.space_ops import angle_of_vector
-from manimlib.utils.space_ops import get_norm
+from manim2.constants import *
+from manim2.mobject.types.image_mobject import AbstractImageMobject
+from manim2.mobject.mobject import Mobject
+from manim2.mobject.types.point_cloud_mobject import PMobject
+from manim2.mobject.types.vectorized_mobject import VMobject
+from manim2.utils.color import color_to_int_rgba
+from manim2.utils.config_ops import digest_config
+from manim2.utils.images import get_full_raster_image_path
+from manim2.utils.iterables import batch_by_property
+from manim2.utils.iterables import list_difference_update
+from manim2.utils.iterables import remove_list_redundancies
+from manim2.utils.simple_functions import fdiv
+from manim2.utils.space_ops import angle_of_vector
+from manim2.utils.space_ops import get_norm
 
 
 class Camera(object):

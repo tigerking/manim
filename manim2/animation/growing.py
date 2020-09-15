@@ -1,6 +1,6 @@
-from manimlib.animation.transform import Transform
-# from manimlib.utils.paths import counterclockwise_path
-from manimlib.constants import PI
+from manim2.animation.transform import Transform
+# from manim2.utils.paths import counterclockwise_path
+from manim2.constants import PI
 
 
 class GrowFromPoint(Transform):

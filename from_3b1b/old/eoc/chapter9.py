@@ -1,7 +1,7 @@
 import scipy
 import fractions
 
-from manimlib.imports import *
+from manim2.imports import *
 
 class Chapter9OpeningQuote(OpeningQuote):
     CONFIG = {

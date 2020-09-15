@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 
-from manimlib.imports import *
+from manim2.imports import *
 
 
 class SimpleVelocityGraph(GraphScene):

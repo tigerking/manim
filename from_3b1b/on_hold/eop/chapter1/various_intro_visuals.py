@@ -1,4 +1,4 @@
-from manimlib.imports import *
+from manim2.imports import *
 from active_projects.eop.reusable_imports import *
 from active_projects.eop.combinations import *
 from active_projects.eop.independence import *

@@ -1,7 +1,7 @@
 from tqdm import tqdm as show_progress
 import cv2
 
-from manimlib.scene.scene import Scene
+from manim2.scene.scene import Scene
 
 
 # TODO, is this depricated?

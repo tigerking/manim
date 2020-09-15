@@ -1,4 +1,4 @@
-from manimlib.imports import *
+from manim2.imports import *
 
 def derivative(func, x, n = 1, dx = 0.01):
     samples = [func(x + (k - n/2)*dx) for k in range(n+1)]

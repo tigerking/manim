@@ -1,4 +1,4 @@
-from manimlib.imports import *
+from manim2.imports import *
 
 from hashlib import sha256
 import binascii

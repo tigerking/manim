@@ -10,17 +10,17 @@ from colour import Color
 import numpy as np
 
 import manimlib.constants as consts
-from manimlib.constants import *
-from manimlib.container.container import Container
-from manimlib.utils.color import color_gradient
-from manimlib.utils.color import interpolate_color
-from manimlib.utils.iterables import list_update
-from manimlib.utils.iterables import remove_list_redundancies
-from manimlib.utils.paths import straight_path
-from manimlib.utils.simple_functions import get_parameters
-from manimlib.utils.space_ops import angle_of_vector
-from manimlib.utils.space_ops import get_norm
-from manimlib.utils.space_ops import rotation_matrix
+from manim2.constants import *
+from manim2.container.container import Container
+from manim2.utils.color import color_gradient
+from manim2.utils.color import interpolate_color
+from manim2.utils.iterables import list_update
+from manim2.utils.iterables import remove_list_redundancies
+from manim2.utils.paths import straight_path
+from manim2.utils.simple_functions import get_parameters
+from manim2.utils.space_ops import angle_of_vector
+from manim2.utils.space_ops import get_norm
+from manim2.utils.space_ops import rotation_matrix
 
 
 # TODO: Explain array_attrs
@@ -100,7 +100,7 @@ class Mobject(Container):
 
     def get_image(self, camera=None):
         if camera is None:
-            from manimlib.camera.camera import Camera
+            from manim2.camera.camera import Camera
             camera = Camera()
         camera.capture_mobject(self)
         return camera.get_image()
@@ -567,7 +567,7 @@ class Mobject(Container):
     def add_background_rectangle(self, color=BLACK, opacity=0.75, **kwargs):
         # TODO, this does not behave well when the mobject has points,
         # since it gets displayed on top
-        from manimlib.mobject.shape_matchers import BackgroundRectangle
+        from manim2.mobject.shape_matchers import BackgroundRectangle
         self.background_rectangle = BackgroundRectangle(
             self, color=color,
             fill_opacity=opacity,

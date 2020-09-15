@@ -136,7 +136,7 @@ def parse_cli():
 def get_module(file_name):
     if file_name == "-":
         module = types.ModuleType("input_scenes")
-        code = "from manimlib.imports import *\n\n" + sys.stdin.read()
+        code = "from manim2.imports import *\n\n" + sys.stdin.read()
         try:
             exec(code, module.__dict__)
             return module

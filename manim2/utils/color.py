@@ -3,11 +3,11 @@ import random
 from colour import Color
 import numpy as np
 
-from manimlib.constants import PALETTE
-from manimlib.constants import WHITE
-from manimlib.utils.bezier import interpolate
-from manimlib.utils.simple_functions import clip_in_place
-from manimlib.utils.space_ops import normalize
+from manim2.constants import PALETTE
+from manim2.constants import WHITE
+from manim2.utils.bezier import interpolate
+from manim2.utils.simple_functions import clip_in_place
+from manim2.utils.space_ops import normalize
 
 
 def color_to_rgb(color):

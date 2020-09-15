@@ -1,4 +1,4 @@
-from manimlib.imports import *
+from manim2.imports import *
 
 from from_3b1b.old.triangle_of_power.triangle import TOP, OPERATION_COLORS
 

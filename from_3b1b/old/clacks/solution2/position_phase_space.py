@@ -1,4 +1,4 @@
-from manimlib.imports import *
+from manim2.imports import *
 from from_3b1b.old.clacks.question import Block
 from from_3b1b.old.clacks.question import Wall
 from from_3b1b.old.clacks.question import ClackFlashes

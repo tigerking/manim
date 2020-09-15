@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from manimlib.imports import *
+from manim2.imports import *
 
 from from_3b1b.old.uncertainty import Flash
 from from_3b1b.old.WindingNumber import *

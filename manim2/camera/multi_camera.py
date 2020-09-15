@@ -1,5 +1,5 @@
-from manimlib.camera.moving_camera import MovingCamera
-from manimlib.utils.iterables import list_difference_update
+from manim2.camera.moving_camera import MovingCamera
+from manim2.utils.iterables import list_difference_update
 
 
 class MultiCamera(MovingCamera):

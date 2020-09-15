@@ -1,4 +1,4 @@
-from manimlib.imports import *
+from manim2.imports import *
 from active_projects.diffyq.part1.shared_constructs import *
 
 

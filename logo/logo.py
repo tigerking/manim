@@ -1,4 +1,4 @@
-from manimlib.imports import *
+from manim2.imports import *
 
 NEW_BLUE = "#68a8e1"
 

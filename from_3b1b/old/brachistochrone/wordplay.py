@@ -2,7 +2,7 @@ import numpy as np
 import itertools as it
 import os
 
-from manimlib.imports import *
+from manim2.imports import *
 from from_3b1b.old.brachistochrone.drawing_images import sort_by_color
 
 class Intro(Scene):

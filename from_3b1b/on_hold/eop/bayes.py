@@ -1,4 +1,4 @@
-from manimlib.imports import *
+from manim2.imports import *
 
 #revert_to_original_skipping_status
 

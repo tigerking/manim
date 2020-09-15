@@ -1,4 +1,4 @@
-from manimlib.imports import *
+from manim2.imports import *
 from from_3b1b.old.eola.footnote2 import TwoDTo1DTransformWithDots
 
 

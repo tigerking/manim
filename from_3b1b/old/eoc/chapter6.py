@@ -1,4 +1,4 @@
-from manimlib.imports import *
+from manim2.imports import *
 
 SPACE_UNIT_TO_PLANE_UNIT = 0.75
 

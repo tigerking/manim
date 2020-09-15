@@ -1,7 +1,7 @@
 import numpy as np
 
-from manimlib.utils.bezier import bezier
-from manimlib.utils.simple_functions import sigmoid
+from manim2.utils.bezier import bezier
+from manim2.utils.simple_functions import sigmoid
 
 
 def linear(t):

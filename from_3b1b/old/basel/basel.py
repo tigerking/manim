@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 
-from manimlib.imports import *
+from manim2.imports import *
 
 from once_useful_constructs.light import *
 

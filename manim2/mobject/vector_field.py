@@ -4,22 +4,22 @@ import itertools as it
 from PIL import Image
 import random
 
-from manimlib.constants import *
+from manim2.constants import *
 
-from manimlib.animation.composition import AnimationGroup
-from manimlib.animation.indication import ShowPassingFlash
-from manimlib.mobject.geometry import Vector
-from manimlib.mobject.types.vectorized_mobject import VGroup
-from manimlib.mobject.types.vectorized_mobject import VMobject
-from manimlib.utils.bezier import inverse_interpolate
-from manimlib.utils.bezier import interpolate
-from manimlib.utils.color import color_to_rgb
-from manimlib.utils.color import rgb_to_color
-from manimlib.utils.config_ops import digest_config
-from manimlib.utils.rate_functions import linear
-from manimlib.utils.simple_functions import sigmoid
-from manimlib.utils.space_ops import get_norm
-# from manimlib.utils.space_ops import normalize
+from manim2.animation.composition import AnimationGroup
+from manim2.animation.indication import ShowPassingFlash
+from manim2.mobject.geometry import Vector
+from manim2.mobject.types.vectorized_mobject import VGroup
+from manim2.mobject.types.vectorized_mobject import VMobject
+from manim2.utils.bezier import inverse_interpolate
+from manim2.utils.bezier import interpolate
+from manim2.utils.color import color_to_rgb
+from manim2.utils.color import rgb_to_color
+from manim2.utils.config_ops import digest_config
+from manim2.utils.rate_functions import linear
+from manim2.utils.simple_functions import sigmoid
+from manim2.utils.space_ops import get_norm
+# from manim2.utils.space_ops import normalize
 
 
 DEFAULT_SCALAR_FIELD_COLORS = [BLUE_E, GREEN, YELLOW, RED]

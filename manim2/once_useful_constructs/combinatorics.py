@@ -1,9 +1,9 @@
-from manimlib.constants import *
-from manimlib.mobject.numbers import Integer
-from manimlib.mobject.svg.tex_mobject import TexMobject
-from manimlib.mobject.types.vectorized_mobject import VMobject, VGroup
-from manimlib.scene.scene import Scene
-from manimlib.utils.simple_functions import choose
+from manim2.constants import *
+from manim2.mobject.numbers import Integer
+from manim2.mobject.svg.tex_mobject import TexMobject
+from manim2.mobject.types.vectorized_mobject import VMobject, VGroup
+from manim2.scene.scene import Scene
+from manim2.utils.simple_functions import choose
 
 
 DEFAULT_COUNT_NUM_OFFSET = (FRAME_X_RADIUS - 1, FRAME_Y_RADIUS - 1, 0)

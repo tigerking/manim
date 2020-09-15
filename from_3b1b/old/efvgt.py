@@ -1,4 +1,4 @@
-from manimlib.imports import *
+from manim2.imports import *
 
 ADDER_COLOR = GREEN
 MULTIPLIER_COLOR = YELLOW

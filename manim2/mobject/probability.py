@@ -1,13 +1,13 @@
-from manimlib.constants import *
-from manimlib.mobject.geometry import Line
-from manimlib.mobject.geometry import Rectangle
-from manimlib.mobject.mobject import Mobject
-from manimlib.mobject.svg.brace import Brace
-from manimlib.mobject.svg.tex_mobject import TexMobject
-from manimlib.mobject.svg.tex_mobject import TextMobject
-from manimlib.mobject.types.vectorized_mobject import VGroup
-from manimlib.utils.color import color_gradient
-from manimlib.utils.iterables import tuplify
+from manim2.constants import *
+from manim2.mobject.geometry import Line
+from manim2.mobject.geometry import Rectangle
+from manim2.mobject.mobject import Mobject
+from manim2.mobject.svg.brace import Brace
+from manim2.mobject.svg.tex_mobject import TexMobject
+from manim2.mobject.svg.tex_mobject import TextMobject
+from manim2.mobject.types.vectorized_mobject import VGroup
+from manim2.utils.color import color_gradient
+from manim2.utils.iterables import tuplify
 
 EPSILON = 0.0001
 

@@ -1,10 +1,10 @@
-from manimlib.constants import *
-from manimlib.mobject.geometry import Line
-from manimlib.mobject.geometry import Rectangle
-from manimlib.mobject.types.vectorized_mobject import VGroup
-from manimlib.mobject.types.vectorized_mobject import VMobject
-from manimlib.utils.color import Color
-from manimlib.utils.config_ops import digest_config
+from manim2.constants import *
+from manim2.mobject.geometry import Line
+from manim2.mobject.geometry import Rectangle
+from manim2.mobject.types.vectorized_mobject import VGroup
+from manim2.mobject.types.vectorized_mobject import VMobject
+from manim2.utils.color import Color
+from manim2.utils.config_ops import digest_config
 
 
 class SurroundingRectangle(Rectangle):

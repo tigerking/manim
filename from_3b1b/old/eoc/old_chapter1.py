@@ -1,4 +1,4 @@
-from manimlib.imports import *
+from manim2.imports import *
 
 
 #### Warning, scenes here not updated based on most recent GraphScene changes #######

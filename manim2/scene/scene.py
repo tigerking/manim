@@ -6,14 +6,14 @@ import platform
 from tqdm import tqdm as ProgressDisplay
 import numpy as np
 
-from manimlib.animation.animation import Animation
-from manimlib.animation.transform import MoveToTarget, ApplyMethod
-from manimlib.camera.camera import Camera
-from manimlib.constants import *
-from manimlib.container.container import Container
-from manimlib.mobject.mobject import Mobject
-from manimlib.scene.scene_file_writer import SceneFileWriter
-from manimlib.utils.iterables import list_update
+from manim2.animation.animation import Animation
+from manim2.animation.transform import MoveToTarget, ApplyMethod
+from manim2.camera.camera import Camera
+from manim2.constants import *
+from manim2.container.container import Container
+from manim2.mobject.mobject import Mobject
+from manim2.scene.scene_file_writer import SceneFileWriter
+from manim2.utils.iterables import list_update
 
 
 class Scene(Container):

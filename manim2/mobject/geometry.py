@@ -1,22 +1,22 @@
 import warnings
 import numpy as np
 
-from manimlib.constants import *
-from manimlib.mobject.mobject import Mobject
-from manimlib.mobject.types.vectorized_mobject import VGroup
-from manimlib.mobject.types.vectorized_mobject import VMobject
-from manimlib.mobject.types.vectorized_mobject import DashedVMobject
-from manimlib.utils.config_ops import digest_config
-from manimlib.utils.iterables import adjacent_n_tuples
-from manimlib.utils.iterables import adjacent_pairs
-from manimlib.utils.simple_functions import fdiv
-from manimlib.utils.space_ops import angle_of_vector
-from manimlib.utils.space_ops import angle_between_vectors
-from manimlib.utils.space_ops import compass_directions
-from manimlib.utils.space_ops import line_intersection
-from manimlib.utils.space_ops import get_norm
-from manimlib.utils.space_ops import normalize
-from manimlib.utils.space_ops import rotate_vector
+from manim2.constants import *
+from manim2.mobject.mobject import Mobject
+from manim2.mobject.types.vectorized_mobject import VGroup
+from manim2.mobject.types.vectorized_mobject import VMobject
+from manim2.mobject.types.vectorized_mobject import DashedVMobject
+from manim2.utils.config_ops import digest_config
+from manim2.utils.iterables import adjacent_n_tuples
+from manim2.utils.iterables import adjacent_pairs
+from manim2.utils.simple_functions import fdiv
+from manim2.utils.space_ops import angle_of_vector
+from manim2.utils.space_ops import angle_between_vectors
+from manim2.utils.space_ops import compass_directions
+from manim2.utils.space_ops import line_intersection
+from manim2.utils.space_ops import get_norm
+from manim2.utils.space_ops import normalize
+from manim2.utils.space_ops import rotate_vector
 
 
 DEFAULT_DOT_RADIUS = 0.08

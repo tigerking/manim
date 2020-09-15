@@ -1,6 +1,6 @@
 import numpy as np
 
-from manimlib.mobject.mobject import Mobject
+from manim2.mobject.mobject import Mobject
 
 
 class ValueTracker(Mobject):

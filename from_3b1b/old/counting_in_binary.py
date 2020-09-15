@@ -6,7 +6,7 @@ import itertools as it
 from copy import deepcopy
 import sys
 
-from manimlib.imports import *
+from manim2.imports import *
 from script_wrapper import command_line_create_scene
 
 MOVIE_PREFIX = "counting_in_binary/"

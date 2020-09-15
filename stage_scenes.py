@@ -5,9 +5,9 @@ import sys
 import importlib
 
 import manimlib.constants as consts
-from manimlib.constants import PRODUCTION_QUALITY_CAMERA_CONFIG
-from manimlib.config import get_module
-from manimlib.extract_scene import is_child_scene
+from manim2.constants import PRODUCTION_QUALITY_CAMERA_CONFIG
+from manim2.config import get_module
+from manim2.extract_scene import is_child_scene
 
 
 def get_sorted_scene_classes(module_name):

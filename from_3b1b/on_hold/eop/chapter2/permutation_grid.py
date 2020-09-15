@@ -1,4 +1,4 @@
-from manimlib.imports import *
+from manim2.imports import *
 
 def print_permutation(index_list):
 

@@ -2,13 +2,13 @@ import numpy as np
 
 from PIL import Image
 
-from manimlib.constants import *
-from manimlib.mobject.mobject import Mobject
-from manimlib.mobject.shape_matchers import SurroundingRectangle
-from manimlib.utils.bezier import interpolate
-from manimlib.utils.color import color_to_int_rgb
-from manimlib.utils.config_ops import digest_config
-from manimlib.utils.images import get_full_raster_image_path
+from manim2.constants import *
+from manim2.mobject.mobject import Mobject
+from manim2.mobject.shape_matchers import SurroundingRectangle
+from manim2.utils.bezier import interpolate
+from manim2.utils.color import color_to_int_rgb
+from manim2.utils.config_ops import digest_config
+from manim2.utils.images import get_full_raster_image_path
 
 
 class AbstractImageMobject(Mobject):

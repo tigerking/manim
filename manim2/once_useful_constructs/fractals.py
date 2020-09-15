@@ -1,21 +1,21 @@
 from functools import reduce
 
-from manimlib.constants import *
-from manimlib.for_3b1b_videos.pi_creature import PiCreature
-from manimlib.for_3b1b_videos.pi_creature import Randolph
-from manimlib.for_3b1b_videos.pi_creature import get_all_pi_creature_modes
-from manimlib.mobject.geometry import Circle
-from manimlib.mobject.geometry import Polygon
-from manimlib.mobject.geometry import RegularPolygon
-from manimlib.mobject.types.vectorized_mobject import VGroup
-from manimlib.mobject.types.vectorized_mobject import VMobject
-from manimlib.utils.bezier import interpolate
-from manimlib.utils.color import color_gradient
-from manimlib.utils.config_ops import digest_config
-from manimlib.utils.space_ops import center_of_mass
-from manimlib.utils.space_ops import compass_directions
-from manimlib.utils.space_ops import rotate_vector
-from manimlib.utils.space_ops import rotation_matrix
+from manim2.constants import *
+from manim2.for_3b1b_videos.pi_creature import PiCreature
+from manim2.for_3b1b_videos.pi_creature import Randolph
+from manim2.for_3b1b_videos.pi_creature import get_all_pi_creature_modes
+from manim2.mobject.geometry import Circle
+from manim2.mobject.geometry import Polygon
+from manim2.mobject.geometry import RegularPolygon
+from manim2.mobject.types.vectorized_mobject import VGroup
+from manim2.mobject.types.vectorized_mobject import VMobject
+from manim2.utils.bezier import interpolate
+from manim2.utils.color import color_gradient
+from manim2.utils.config_ops import digest_config
+from manim2.utils.space_ops import center_of_mass
+from manim2.utils.space_ops import compass_directions
+from manim2.utils.space_ops import rotate_vector
+from manim2.utils.space_ops import rotation_matrix
 
 
 def rotate(points, angle=np.pi, axis=OUT):

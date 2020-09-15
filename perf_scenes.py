@@ -1,4 +1,4 @@
-from manimlib.imports import *
+from manim2.imports import *
 
 """
 A set of scenes to be used for performance testing of Manim.

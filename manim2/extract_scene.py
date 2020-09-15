@@ -6,9 +6,9 @@ import subprocess as sp
 import sys
 import traceback
 
-from manimlib.scene.scene import Scene
-from manimlib.utils.sounds import play_error_sound
-from manimlib.utils.sounds import play_finish_sound
+from manim2.scene.scene import Scene
+from manim2.utils.sounds import play_error_sound
+from manim2.utils.sounds import play_finish_sound
 import manimlib.constants
 
 

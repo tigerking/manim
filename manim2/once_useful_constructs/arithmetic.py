@@ -1,9 +1,9 @@
 import numpy as np
 
-from manimlib.animation.animation import Animation
-from manimlib.constants import *
-from manimlib.mobject.svg.tex_mobject import TexMobject
-from manimlib.scene.scene import Scene
+from manim2.animation.animation import Animation
+from manim2.constants import *
+from manim2.mobject.svg.tex_mobject import TexMobject
+from manim2.scene.scene import Scene
 
 
 class RearrangeEquation(Scene):

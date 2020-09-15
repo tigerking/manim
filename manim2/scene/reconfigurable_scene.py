@@ -1,7 +1,7 @@
-from manimlib.animation.transform import Transform
-from manimlib.constants import *
-from manimlib.mobject.mobject import Mobject
-from manimlib.scene.scene import Scene
+from manim2.animation.transform import Transform
+from manim2.constants import *
+from manim2.mobject.mobject import Mobject
+from manim2.scene.scene import Scene
 
 
 class ReconfigurableScene(Scene):

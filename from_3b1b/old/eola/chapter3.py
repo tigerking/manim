@@ -1,4 +1,4 @@
-from manimlib.imports import *
+from manim2.imports import *
 
 def curvy_squish(point):
     x, y, z = point

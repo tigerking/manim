@@ -1,4 +1,4 @@
-from manimlib.imports import *
+from manim2.imports import *
 from from_3b1b.old.clacks.solution2.position_phase_space import ShowMomentumConservation
 
 

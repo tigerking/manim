@@ -3,7 +3,7 @@ import sys
 import os.path
 import cv2
 
-from manimlib.imports import *
+from manim2.imports import *
 
 from nn.network import *
 from nn.part1 import *

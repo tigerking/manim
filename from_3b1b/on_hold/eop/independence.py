@@ -1,4 +1,4 @@
-from manimlib.imports import *
+from manim2.imports import *
 
 from scene.scene import ProgressDisplay
 import scipy

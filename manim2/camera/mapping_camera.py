@@ -1,9 +1,9 @@
 import numpy as np
 
-from manimlib.camera.camera import Camera
-from manimlib.mobject.types.vectorized_mobject import VMobject
-from manimlib.utils.config_ops import DictAsObject
-from manimlib.utils.config_ops import digest_config
+from manim2.camera.camera import Camera
+from manim2.mobject.types.vectorized_mobject import VMobject
+from manim2.utils.config_ops import DictAsObject
+from manim2.utils.config_ops import digest_config
 
 # TODO: Add an attribute to mobjects under which they can specify that they should just
 # map their centers but remain otherwise undistorted (useful for labels, etc.)
