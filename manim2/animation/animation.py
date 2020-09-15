@@ -25,6 +25,8 @@ class Animation(object):
         # with lagged start times
         "lag_ratio": DEFAULT_ANIMATION_LAG_RATIO,
         "suspend_mobject_updating": True,
+        "submobject_mode": "None",
+        "lag_factor": 2,
     }
 
     def __init__(self, mobject, **kwargs):
@@ -135,6 +137,18 @@ class Animation(object):
         full_length = (num_submobjects - 1) * lag_ratio + 1
         value = alpha * full_length
         lower = index * lag_ratio
+        if self.submobject_mode in ["lagged_start", "smoothed_lagged_start"]:
+            prop = float(index) / num_submobjects
+            if self.submobject_mode is "smoothed_lagged_start":
+                prop = smooth(prop)
+            lf = self.lag_factor
+            return np.clip(lf * alpha - (lf - 1) * prop, 0, 1)
+        elif self.submobject_mode == "one_at_a_time":
+            lower = float(index) / num_submobjects
+            upper = float(index + 1) / num_submobjects
+            return np.clip((alpha - lower) / (upper - lower), 0, 1)
+        elif self.submobject_mode == "all_at_once":
+            return alpha
         return np.clip((value - lower), 0, 1)
 
     # Getters and setters
