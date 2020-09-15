@@ -3,7 +3,14 @@ import os
 
 
 # TK ++
-TEX_USE_CTEX = True
+
+# TEX_USE_CTEX = False
+env_TEX_USE_CTEX = os.environ.get('TEX_USE_CTEX')
+if env_TEX_USE_CTEX and env_TEX_USE_CTEX.lower() == 'true':
+    TEX_USE_CTEX = True
+else:
+    TEX_USE_CTEX = False
+
 # TK END
 
 MEDIA_DIR = ""

@@ -7,6 +7,10 @@ class RedesEspanhol(Scene):
         self.redes_esp()
 
     def redes_esp(self):
+        print('TODO,RedesEspanhol do nothing -- TK')
+        pass
+
+    def Xredes_esp(self):
         twitter = Twitter()
         reddits = Reddits()
         instagram = Instagram()
@@ -112,6 +116,11 @@ class RedesIngles(Scene):
         self.redes_ing()
 
     def redes_ing(self):
+        print('TODO, RedesIngles do nothing -- TK')
+        pass
+
+
+    def Xredes_ing(self):
         twitter = Twitter()
         reddits = Reddits()
         instagram = Instagram()
@@ -164,7 +173,7 @@ class RedesIngles(Scene):
                 if i==0:
                     redes_f[i][-1].set_fill(WHITE,smooth(1-dif/vector))
             return grupo
-        
+
 
         #self.play(FadeIn(circles))
         self.Oldplay(redes_f.shift,RIGHT*2,
@@ -192,11 +201,11 @@ class RedesIngles(Scene):
         patreons.next_to(agradecimientos,DOWN)
         grupo_patreon=VGroup(agradecimientos,patreons).arrange(DOWN).to_edge(DOWN)
         #patreons.align_on_border(DOWN,buff=0)
-        
+
         for x in range(2):
             self.play(
                 ShowCreationThenDestruction(
-                    grupo_circulos, 
+                    grupo_circulos,
                     time_width = 0.5,
                     run_time = 2,
                     rate_func=linear

@@ -123,6 +123,12 @@ class GraphScene(Scene):
             line_to_number_vect=LEFT,
             label_direction=LEFT,
         )
+        
+        # TK ++
+        self.x_axis_line=x_axis
+        self.y_axis_line=y_axis
+        # TK END
+        
         y_axis.shift(self.graph_origin - y_axis.number_to_point(0))
         y_axis.rotate(np.pi / 2, about_point=y_axis.number_to_point(0))
         if len(self.y_labeled_nums) > 0:

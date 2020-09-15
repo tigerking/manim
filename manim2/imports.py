@@ -60,10 +60,13 @@ from manim2.mobject.mobject_update_utils import *
 from manim2.mobject.value_tracker import *
 from manim2.mobject.vector_field import *
 
-from manim2.for_3b1b_videos.common_scenes import *
-from manim2.for_3b1b_videos.pi_creature import *
-from manim2.for_3b1b_videos.pi_creature_animations import *
-from manim2.for_3b1b_videos.pi_creature_scene import *
+# TK --
+# from manim2.for_3b1b_videos.common_scenes import *
+# from manim2.for_3b1b_videos.pi_creature import *
+# from manim2.for_3b1b_videos.pi_creature_animations import *
+# from manim2.for_3b1b_videos.pi_creature_scene import *
+
+# TK END
 
 from manim2.once_useful_constructs.arithmetic import *
 from manim2.once_useful_constructs.combinatorics import *
@@ -110,6 +113,23 @@ from manim2.old_animations.old_movement import *
 from manim2.old_animations.old_update import *
 from manim2.old_animations.old_indication import *
 from manim2.old_animations.old_rotation import *
+
+
+try:
+    from manim2.for_tb_videos.svg_objects import *
+    from manim2.for_tb_videos.chat import *
+    from manim2.for_tb_videos.image_objects import *
+    from manim2.for_tb_videos.tb_objects import *
+    from manim2.for_tb_videos.tb_animations import *
+    from manim2.for_tb_videos.music_objects import *
+    from manim2.scene.music_scene import *
+    from manim2.scene.plot_scene import *
+    from manim2.scene.tools_scene import *
+    from manim2.for_tb_videos.omega_creature import *
+except Exception as e:
+    print('WARNING: import exceptions  {}'.format(e))
+    pass
+
 
 # TK END
 
