@@ -98,6 +98,12 @@ from manim2.utils.sounds import *
 from manim2.utils.space_ops import *
 from manim2.utils.strings import *
 
+
+# TK
+from manim2.scene.end_video import *
+# TK END
+
+
 # Non manim libraries that are also nice to have without thinking
 
 import inspect
