@@ -7,7 +7,7 @@ import _thread as thread
 from time import sleep
 import datetime
 
-import manimlib.constants as consts
+import manim2.constants as consts
 from manim2.constants import FFMPEG_BIN
 from manim2.constants import STREAMING_IP
 from manim2.constants import STREAMING_PORT

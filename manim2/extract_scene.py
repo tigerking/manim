@@ -9,7 +9,7 @@ import traceback
 from manim2.scene.scene import Scene
 from manim2.utils.sounds import play_error_sound
 from manim2.utils.sounds import play_finish_sound
-import manimlib.constants
+import manim2.constants
 
 
 def open_file_if_needed(file_writer, **config):

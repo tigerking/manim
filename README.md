@@ -15,7 +15,7 @@ To get help or to join the development effort, please join the [discord](https:/
 Manim runs on Python 3.7. You can install it from PyPI via pip:
 
 ```sh
-pip3 install manimlib
+pip3 install manim2
 ```
 
 System requirements are [cairo](https://www.cairographics.org), [ffmpeg](https://www.ffmpeg.org), [sox](http://sox.sourceforge.net), [latex](https://www.latex-project.org) (optional, if you want to use LaTeX).
@@ -30,7 +30,7 @@ For more options, take a look at the [Using manim](#using-manim) sections furthe
 
 ### Directly
 
-If you want to hack on manimlib itself, clone this repository and in that directory execute:
+If you want to hack on manim2 itself, clone this repository and in that directory execute:
 
 ```sh
 # Install python requirements

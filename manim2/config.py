@@ -5,7 +5,7 @@ import os
 import sys
 import types
 
-import manimlib.constants
+import manim2.constants
 
 
 def parse_cli():
@@ -209,13 +209,13 @@ def get_configuration(args):
 def get_camera_configuration(args):
     camera_config = {}
     if args.low_quality:
-        camera_config.update(manimlib.constants.LOW_QUALITY_CAMERA_CONFIG)
+        camera_config.update(manim2.constants.LOW_QUALITY_CAMERA_CONFIG)
     elif args.medium_quality:
-        camera_config.update(manimlib.constants.MEDIUM_QUALITY_CAMERA_CONFIG)
+        camera_config.update(manim2.constants.MEDIUM_QUALITY_CAMERA_CONFIG)
     elif args.high_quality:
-        camera_config.update(manimlib.constants.HIGH_QUALITY_CAMERA_CONFIG)
+        camera_config.update(manim2.constants.HIGH_QUALITY_CAMERA_CONFIG)
     else:
-        camera_config.update(manimlib.constants.PRODUCTION_QUALITY_CAMERA_CONFIG)
+        camera_config.update(manim2.constants.PRODUCTION_QUALITY_CAMERA_CONFIG)
 
     # If the resolution was passed in via -r
     if args.resolution:

@@ -5,7 +5,7 @@ from pathlib import Path
 
 from manim2.constants import TEX_TEXT_TO_REPLACE
 from manim2.constants import TEX_USE_CTEX
-import manimlib.constants as consts
+import manim2.constants as consts
 
 
 def tex_hash(expression, template_tex_file_body):

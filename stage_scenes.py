@@ -4,7 +4,7 @@ import os
 import sys
 import importlib
 
-import manimlib.constants as consts
+import manim2.constants as consts
 from manim2.constants import PRODUCTION_QUALITY_CAMERA_CONFIG
 from manim2.config import get_module
 from manim2.extract_scene import is_child_scene

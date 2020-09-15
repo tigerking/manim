@@ -1,7 +1,7 @@
 #!/usr/bin/env python
-import manimlib.config
-import manimlib.constants
-import manimlib.extract_scene
+import manim2.config
+import manim2.constants
+import manim2.extract_scene
 
 
 def main():
