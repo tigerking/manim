@@ -12,8 +12,8 @@ RUN apt-get update \
         texlive-science \
         tipa \
     && rm -rf /var/lib/apt/lists/*
-COPY . /manim
-RUN cd /manim \
+COPY . /manim2
+RUN cd /manim2 \
     && python setup.py sdist \
-    && python -m pip install dist/manimlib*
+    && python -m pip install dist/manim2*
 ENTRYPOINT ["/bin/bash"]

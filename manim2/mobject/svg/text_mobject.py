@@ -3,7 +3,7 @@ import os
 import copy
 import hashlib
 import cairo
-import manimlib.constants as consts
+import manim2.constants as consts
 from manim2.constants import *
 from manim2.container.container import Container
 from manim2.mobject.geometry import Dot, Rectangle
