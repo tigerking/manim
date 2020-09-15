@@ -1,6 +1,7 @@
 import numpy as np
 import os
 
+
 MEDIA_DIR = ""
 VIDEO_DIR = ""
 VIDEO_OUTPUT_DIR = ""
@@ -71,7 +72,20 @@ ITALIC = 'ITALIC'
 OBLIQUE = 'OBLIQUE'
 BOLD = 'BOLD'
 
-TEX_USE_CTEX = False
+# TK FIX
+# TEX_USE_CTEX = False
+
+# env_TEX_USE_CTEX = os.environ.get('TEX_USE_CTEX')
+# if env_TEX_USE_CTEX and env_TEX_USE_CTEX.lower() == 'true':
+#     TEX_USE_CTEX = True
+# else:
+#     TEX_USE_CTEX = False
+# print('env_TEX_USE_CTEX= {}, TEX_USE_CTEX={}'.format(env_TEX_USE_CTEX, TEX_USE_CTEX));
+
+TEX_USE_CTEX = True
+
+# TK END
+
 TEX_TEXT_TO_REPLACE = "YourTextHere"
 TEMPLATE_TEX_FILE = os.path.join(
     os.path.dirname(os.path.realpath(__file__)),
