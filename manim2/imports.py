@@ -101,6 +101,16 @@ from manim2.utils.strings import *
 
 # TK
 from manim2.scene.end_video import *
+
+#-----------Old animations
+from manim2.old_animations.old_creation import *
+from manim2.old_animations.old_transform import *
+from manim2.old_animations.old_numbers import *
+from manim2.old_animations.old_movement import *
+from manim2.old_animations.old_update import *
+from manim2.old_animations.old_indication import *
+from manim2.old_animations.old_rotation import *
+
 # TK END
 
 

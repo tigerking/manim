@@ -1165,5 +1165,62 @@ class Scene(Container):
         self.get_image().show()
 
 
+    @handle_play_like_call
+    def Oldplay(self, *args, **kwargs):
+        if len(args) == 0:
+            warnings.warn("Called Scene.play with no animations")
+            return
+
+        animations = self.Oldcompile_play_args_to_animation_list(*args)
+        for animation in animations:
+            # This is where kwargs to play like run_time and rate_func
+            # get applied to all animations
+            animation.update_config(**kwargs)
+            # Anything animated that's not already in the
+            # scene gets added to the scene
+            if animation.mobject not in self.get_mobject_family_members():
+                self.add(animation.mobject)
+            # Don't call the update functions of a mobject
+            # being animated
+            animation.mobject.suspend_updating()
+        moving_mobjects = self.get_moving_mobjects(*animations)
+
+        # Paint all non-moving objects onto the screen, so they don't
+        # have to be rendered every frame
+        self.update_frame(excluded_mobjects=moving_mobjects)
+        static_image = self.get_frame()
+        for t in self.get_animation_time_progression(animations):
+            for animation in animations:
+                animation.update(t / animation.run_time)
+            dt = 1 / self.camera.frame_rate
+            self.continual_update(dt)
+            self.update_frame(moving_mobjects, static_image)
+            self.add_frames(self.get_frame())
+        self.mobjects_from_last_animation = [
+            anim.mobject for anim in animations
+        ]
+        self.Oldclean_up_animations(*animations)
+        if self.skip_animations:
+            self.continual_update(self.get_run_time(animations))
+        else:
+            self.continual_update(0)
+
+        return self
+
+
+    def idle_stream(self):
+        self.file_writer.idle_stream()
+
+    def Oldclean_up_animations(self, *animations):
+        for animation in animations:
+            animation.clean_up(self)
+            animation.mobject.resume_updating()
+        return self
+
+    def clean_up_animations(self, *animations):
+        for animation in animations:
+            animation.clean_up_from_scene(self)
+        return self
+
 class EndSceneEarlyException(Exception):
     pass

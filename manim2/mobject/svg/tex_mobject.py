@@ -326,3 +326,89 @@ class Title(TextMobject):
                 underline.set_width(self.underline_width)
             self.add(underline)
             self.underline = underline
+
+class Text(TextMobject):
+    pass
+
+class Formula(TexMobject):
+    pass
+
+class SimpleTikz(TextMobject):
+    CONFIG={
+    "template_tex_file_body": TEMPLATE_TEX_FILE_BODY_TIKZ,
+    "stroke_width": 1,
+    "fill_opacity": 1,
+    "background_stroke_width": 0,
+    "background_stroke_color": BLACK,
+    }
+
+class Tikz(TextMobject):
+    CONFIG={
+    "template_tex_file_body": TEMPLATE_TEXT_FILE_BODY_TIKZ,
+    "stroke_width": 1,
+    "fill_opacity": 1,
+    "background_stroke_width": 0,
+    "background_stroke_color": BLACK,
+    }
+
+class SimpleListings(TexMobject):
+    CONFIG={
+    "template_tex_file_body": TEMPLATE_TEX_FILE_BODY_LISTINGS,
+    }
+
+class Listings(TextMobject):
+    CONFIG={
+    "template_tex_file_body": TEMPLATE_TEXT_FILE_BODY_LISTINGS,
+    }
+
+class MusicTeX(TexMobject):
+    CONFIG={
+    "template_tex_file_body": TEMPLATE_TEX_FILE_BODY_MUSIC,
+    }
+
+class GenericFont(TexMobject):
+    CONFIG={
+    "template_tex_file_body": TEMPLATE_TEXT_FILE_BODY_FONTS,
+    "font":""
+    }
+    def get_modified_expression(self, tex_string):
+        result = self.alignment + " " + self.font + " " + tex_string
+        result = result.strip()
+        result = self.modify_special_strings(result)
+        return result
+
+class TextFull(TextMobject):
+    CONFIG={
+    "template_tex_file_body": TEMPLATE_TEXT_FILE_BODY_FULL,
+    }
+
+class FormulaFull(TexMobject):
+    CONFIG={
+    "template_tex_file_body": TEMPLATE_TEX_FILE_BODY_FULL,
+    }
+
+class TextJustify(TexMobject):
+    CONFIG = {
+        "alignment": "\\justify",
+        "arg_separator": "",
+        "j_width":6,
+        "tex_template":"tex_template.tex"
+    }
+    def __init__(self,tex_string, **kwargs):
+        digest_config(self, kwargs)
+        assert(isinstance(tex_string, str))
+        self.tex_string = tex_string
+        file_name = tex_to_svg_file(
+            self.get_modified_expression(tex_string),
+            return_tex_template(self.j_width,self.tex_template)
+        )
+        SVGMobject.__init__(self, file_name=file_name, **kwargs)
+        if self.height is None:
+            self.scale(TEX_MOB_SCALE_FACTOR)
+        if self.organize_left_to_right:
+            self.organize_submobjects_left_to_right()
+
+class FunText(GenericFont):
+    CONFIG={
+    "font":"\\ECFAugie"
+    }

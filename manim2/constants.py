@@ -2,6 +2,10 @@ import numpy as np
 import os
 
 
+# TK ++
+TEX_USE_CTEX = True
+# TK END
+
 MEDIA_DIR = ""
 VIDEO_DIR = ""
 VIDEO_OUTPUT_DIR = ""
@@ -82,13 +86,17 @@ BOLD = 'BOLD'
 #     TEX_USE_CTEX = False
 # print('env_TEX_USE_CTEX= {}, TEX_USE_CTEX={}'.format(env_TEX_USE_CTEX, TEX_USE_CTEX));
 
-TEX_USE_CTEX = True
+# TEX_USE_CTEX = False
 
 # TK END
 
+TEX_RES_PATH = os.path.join(
+    os.path.dirname(os.path.realpath(__file__)), 'tex_files')
+
 TEX_TEXT_TO_REPLACE = "YourTextHere"
 TEMPLATE_TEX_FILE = os.path.join(
-    os.path.dirname(os.path.realpath(__file__)),
+    #os.path.dirname(os.path.realpath(__file__)),
+    TEX_RES_PATH,
     "tex_template.tex" if not TEX_USE_CTEX else "ctex_template.tex"
 )
 with open(TEMPLATE_TEX_FILE, "r") as infile:
@@ -97,6 +105,77 @@ with open(TEMPLATE_TEX_FILE, "r") as infile:
         TEX_TEXT_TO_REPLACE,
         "\\begin{align*}\n" + TEX_TEXT_TO_REPLACE + "\n\\end{align*}",
     )
+
+#-----------Tikz
+TEMPLATE_TEX_FILE_TIKZ = os.path.join(
+    #THIS_DIR,"tex_files", "tex_template_tikz.tex")
+    TEX_RES_PATH, "tex_template_tikz.tex")
+
+with open(TEMPLATE_TEX_FILE_TIKZ, "r") as infile:
+    TEMPLATE_TEXT_FILE_BODY_TIKZ = infile.read()
+    TEMPLATE_TEX_FILE_BODY_TIKZ = TEMPLATE_TEXT_FILE_BODY_TIKZ.replace(
+        TEX_TEXT_TO_REPLACE,
+        "\\begin{tikzpicture}\n" + TEX_TEXT_TO_REPLACE + "\n\\end{tikzpicture}",
+    )
+
+#-----------Listings
+TEMPLATE_TEX_FILE_LISTINGS = os.path.join(
+    TEX_RES_PATH, "tex_template_listings.tex")
+with open(TEMPLATE_TEX_FILE_LISTINGS, "r") as infile:
+    TEMPLATE_TEXT_FILE_BODY_LISTINGS = infile.read()
+    TEMPLATE_TEX_FILE_BODY_LISTINGS = TEMPLATE_TEXT_FILE_BODY_LISTINGS.replace(
+        TEX_TEXT_TO_REPLACE,
+        "\\begin{lstlisting}\n" + TEX_TEXT_TO_REPLACE + "\n\\end{lstlisting}",
+    )
+#-----------Music
+TEMPLATE_TEX_FILE_MUSIC = os.path.join(
+    TEX_RES_PATH, "tex_template_music.tex")
+with open(TEMPLATE_TEX_FILE_MUSIC, "r") as infile:
+    TEMPLATE_TEXT_FILE_BODY_MUSIC = infile.read()
+    TEMPLATE_TEX_FILE_BODY_MUSIC = TEMPLATE_TEXT_FILE_BODY_MUSIC.replace(
+        TEX_TEXT_TO_REPLACE,
+        "\\begin{music}\n" + TEX_TEXT_TO_REPLACE + "\n\\end{music}",
+    )
+#-----------Braces
+TEMPLATE_TEX_FILE_BRACES = os.path.join(
+    TEX_RES_PATH, "tex_template_braces.tex")
+with open(TEMPLATE_TEX_FILE_BRACES, "r") as infile:
+    TEMPLATE_TEXT_FILE_BODY_BRACES = infile.read()
+    TEMPLATE_TEX_FILE_BODY_BRACES = TEMPLATE_TEXT_FILE_BODY_BRACES.replace(
+        TEX_TEXT_TO_REPLACE,
+        "\\begin{align*}\n" + TEX_TEXT_TO_REPLACE + "\n\\end{align*}",
+    )
+#-----------Fonts
+TEMPLATE_TEX_FILE_FONTS = os.path.join(
+    TEX_RES_PATH, "tex_template_fonts.tex")
+with open(TEMPLATE_TEX_FILE_FONTS, "r") as infile:
+    TEMPLATE_TEXT_FILE_BODY_FONTS = infile.read()
+    TEMPLATE_TEX_FILE_BODY_FONTS = TEMPLATE_TEXT_FILE_BODY_FONTS.replace(
+        TEX_TEXT_TO_REPLACE,
+        "\\begin{align*}\n" + TEX_TEXT_TO_REPLACE + "\n\\end{align*}",
+    )
+#-----------FULL
+TEMPLATE_TEX_FILE_FULL = os.path.join(
+    TEX_RES_PATH, "tex_template_full.tex")
+with open(TEMPLATE_TEX_FILE_FULL, "r") as infile:
+    TEMPLATE_TEXT_FILE_BODY_FULL = infile.read()
+    TEMPLATE_TEX_FILE_BODY_FULL = TEMPLATE_TEXT_FILE_BODY_FULL.replace(
+        TEX_TEXT_TO_REPLACE,
+        "\\begin{align*}\n" + TEX_TEXT_TO_REPLACE + "\n\\end{align*}",
+    )
+#----------Custom
+def get_template_tex(mode,begin="\\begin{align*}\n",end="\n\\end{align*}"):
+    ttf=os.path.join(TEX_RES_PATH, "tex_template_%s.tex"%mode)
+    with open(ttf, "r") as infile:
+        ttextfb = infile.read()
+        ttexfb = ttextfb.replace(
+            TEX_TEXT_TO_REPLACE,
+            begin + TEX_TEXT_TO_REPLACE + end,
+        )
+        return ttextfb,ttexfb
+
+# TK END
+
 
 HELP_MESSAGE = """
    Usage:

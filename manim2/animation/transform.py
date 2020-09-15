@@ -322,3 +322,107 @@ class TransformAnimations(Transform):
         self.start_anim.interpolate(alpha)
         self.end_anim.interpolate(alpha)
         Transform.interpolate(self, alpha)
+        
+
+#News
+
+from manim2.animation.animation import OldAnimation
+
+def instantiate(obj):
+    """
+    Useful so that classes or instance of those classes can be
+    included in configuration, which can prevent defaults from
+    getting created during compilation/importing
+    """
+    return obj() if isinstance(obj, type) else obj
+
+class OldTransform(OldAnimation):
+    CONFIG = {
+        "path_arc": 0,
+        "path_arc_axis": OUT,
+        "path_func": None,
+        "submobject_mode": "all_at_once",
+        "replace_mobject_with_target_in_scene": False,
+    }
+
+    def __init__(self, mobject, target_mobject, **kwargs):
+        # Copy target_mobject so as to not mess with caller
+        self.original_target_mobject = target_mobject
+        target_mobject = target_mobject.copy()
+        mobject.align_data(target_mobject)
+        self.target_mobject = target_mobject
+        digest_config(self, kwargs)
+        self.init_path_func()
+
+        OldAnimation.__init__(self, mobject, **kwargs)
+        self.name += "To" + str(target_mobject)
+
+    def update_config(self, **kwargs):
+        OldAnimation.update_config(self, **kwargs)
+        if "path_arc" in kwargs:
+            self.path_func = path_along_arc(
+                kwargs["path_arc"],
+                kwargs.get("path_arc_axis", OUT)
+            )
+
+    def init_path_func(self):
+        if self.path_func is not None:
+            return
+        elif self.path_arc == 0:
+            self.path_func = straight_path
+        else:
+            self.path_func = path_along_arc(
+                self.path_arc,
+                self.path_arc_axis,
+            )
+
+    def get_all_mobjects(self):
+        return self.mobject, self.starting_mobject, self.target_mobject
+
+    def update_submobject(self, submob, start, end, alpha):
+        submob.interpolate(start, end, alpha, self.path_func)
+        return self
+
+    def clean_up(self, surrounding_scene=None):
+        OldAnimation.clean_up(self, surrounding_scene)
+        if self.replace_mobject_with_target_in_scene and surrounding_scene is not None:
+            surrounding_scene.remove(self.mobject)
+            if not self.remover:
+                surrounding_scene.add(self.original_target_mobject)
+
+class OldMoveToTarget(OldTransform):
+    def __init__(self, mobject, **kwargs):
+        if not hasattr(mobject, "target"):
+            raise Exception(
+                "MoveToTarget called on mobject without attribute 'target' ")
+        OldTransform.__init__(self, mobject, mobject.target, **kwargs)
+
+class OldApplyMethod(OldTransform):
+    CONFIG = {
+        "submobject_mode": "all_at_once"
+    }
+
+    def __init__(self, method, *args, **kwargs):
+        """
+        Method is a method of Mobject.  *args is for the method,
+        **kwargs is for the transform itself.
+
+        Relies on the fact that mobject methods return the mobject
+        """
+        if not inspect.ismethod(method):
+            raise Exception(
+                "Whoops, looks like you accidentally invoked "
+                "the method you want to animate"
+            )
+        assert(isinstance(method.__self__, Mobject))
+        args = list(args)  # So that args.pop() works
+        if "method_kwargs" in kwargs:
+            method_kwargs = kwargs["method_kwargs"]
+        elif len(args) > 0 and isinstance(args[-1], dict):
+            method_kwargs = args.pop()
+        else:
+            method_kwargs = {}
+        target = method.__self__.copy()
+        method.__func__(target, *args, **method_kwargs)
+        OldTransform.__init__(self, method.__self__, target, **kwargs)
+
