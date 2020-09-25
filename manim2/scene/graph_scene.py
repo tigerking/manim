@@ -51,6 +51,10 @@ class GraphScene(Scene):
         "default_riemann_end_color": GREEN,
         "area_opacity": 0.8,
         "num_rects": 50,
+
+        # TK ++
+        "x_label_color": WHITE,
+        "y_label_color": WHITE,
     }
 
     def setup(self):
@@ -74,6 +78,9 @@ class GraphScene(Scene):
         animate (bool=False)
             Whether or not to animate the setting up of the Axes.
         """
+
+        print('x_label_color={}, y_label_color={}'.format(self.x_label_color, self.y_label_color))
+
         # TODO, once eoc is done, refactor this to be less redundant.
         x_num_range = float(self.x_max - self.x_min)
         self.space_unit_to_x = self.x_axis_width / x_num_range
@@ -96,7 +103,9 @@ class GraphScene(Scene):
                 self.x_labeled_nums = [x for x in self.x_labeled_nums if x != 0]
             x_axis.add_numbers(*self.x_labeled_nums)
         if self.x_axis_label:
-            x_label = TextMobject(self.x_axis_label)
+            # TK update to support xy label color
+            # x_label = TextMobject(self.x_axis_label)
+            x_label = TextMobject(self.x_axis_label, color=self.x_label_color) # TK updated
             x_label.next_to(
                 x_axis.get_tick_marks(), UP + RIGHT,
                 buff=SMALL_BUFF
@@ -136,7 +145,10 @@ class GraphScene(Scene):
                 self.y_labeled_nums = [y for y in self.y_labeled_nums if y != 0]
             y_axis.add_numbers(*self.y_labeled_nums)
         if self.y_axis_label:
-            y_label = TextMobject(self.y_axis_label)
+            # TK update to support xy label color
+            # y_label = TextMobject(self.y_axis_label )
+            y_label = TextMobject(self.y_axis_label, color=self.y_label_color)
+
             y_label.next_to(
                 y_axis.get_corner(UP + RIGHT), UP + RIGHT,
                 buff=SMALL_BUFF
