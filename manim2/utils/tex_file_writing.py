@@ -1,5 +1,6 @@
 import os
 import hashlib
+import platform
 
 from pathlib import Path
 
@@ -7,6 +8,11 @@ from manim2.constants import TEX_TEXT_TO_REPLACE
 from manim2.constants import TEX_USE_CTEX
 import manim2.constants as consts
 
+
+# TK FIX
+CURRENT_OS = platform.system()
+# eg, /usr/local/Cellar/ghostscript/9.52/lib/libgs.dylib
+libgs_version="9.52"
 
 def tex_hash(expression, template_tex_file_body):
     id_str = str(expression + template_tex_file_body)
@@ -84,6 +90,20 @@ def dvi_to_svg(dvi_file, regen_if_exists=False):
     result = Path(result).as_posix()
     dvi_file = Path(dvi_file).as_posix()
     if not os.path.exists(result):
+        # TK fix,
+
+        # commands = [
+        #     "dvisvgm",
+        #     "\"{}\"".format(dvi_file),
+        #     "-n",
+        #     "-v",
+        #     "0",
+        #     "-o",
+        #     "\"{}\"".format(result),
+        #     ">",
+        #     os.devnull
+        # ]
+
         commands = [
             "dvisvgm",
             "\"{}\"".format(dvi_file),
@@ -92,8 +112,16 @@ def dvi_to_svg(dvi_file, regen_if_exists=False):
             "0",
             "-o",
             "\"{}\"".format(result),
+        ]
+
+        if CURRENT_OS == "Darwin":
+            commands += [
+                f"--libgs='/usr/local/Cellar/ghostscript/{libgs_version}/lib/libgs.dylib'"
+            ]
+        commands += [
             ">",
             os.devnull
         ]
+
         os.system(" ".join(commands))
     return result
