@@ -10,6 +10,7 @@ import manim2.constants as consts
 
 
 # TK FIX
+
 CURRENT_OS = platform.system()
 # eg, /usr/local/Cellar/ghostscript/9.52/lib/libgs.dylib
 libgs_version="9.52"
@@ -114,10 +115,14 @@ def dvi_to_svg(dvi_file, regen_if_exists=False):
             "\"{}\"".format(result),
         ]
 
-        if CURRENT_OS == "Darwin":
+        # TK ++
+        env_TEX_USE_LIBGS = os.environ.get('TEX_USE_LIBGS')
+        if CURRENT_OS == "Darwin" and env_TEX_USE_LIBGS and env_TEX_USE_LIBGS.lower() == 'true':
             commands += [
                 f"--libgs='/usr/local/Cellar/ghostscript/{libgs_version}/lib/libgs.dylib'"
             ]
+        # TK END
+
         commands += [
             ">",
             os.devnull
